@@ -3,6 +3,7 @@ require "bundler"
 Bundler.require(:default)
 require_relative './main.rb'
 require 'Artii'
+require_relative './Stories/3 pigs/three_pigs.rb'
 
 CLEAR = puts "\e[H\e[2J"
 
@@ -15,15 +16,19 @@ prompt = TTY::Prompt.new
 "Select a story to advanture:\n ".each_char {|c|print c; sleep 0.05}
 
 sleep 1
-story_dir = prompt.select(" ") do |menu|
+selection = prompt.select(" ") do |menu|
   menu.enum '.'
-  # Dir.glob("stories/*/story.rb").each do |story_rb|
-  #   story_dir = File.dirname story_rb
-  #   menu.choice story_meta["#{@title}"], story_dir
-  # end
-  menu.choice "three pigs"
-  menu.choice "Wild of wild"
-  menu.choice "hahaha"
+  menu.choice('three pigs', 1)
+  menu.choice('Wild of wild', 2)
+  menu.choice('hahaha', 3)
+  menu.choice('Exit', 4)
+ 
+  case selection
+    when 1
+      return "Three"
+      when 4
+        puts exit
+  end
 end
 
-Game.new(story_dir).start
+# Game.new(story_dir).start
