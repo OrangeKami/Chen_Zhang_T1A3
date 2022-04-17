@@ -67,7 +67,8 @@ def end_three_pigs
     line_break_space
     chat "They also built their houses with bricks and all three little pigs lived happily ever after.".colorize(:cyan)
     line_break_space
-    chat "THE END".colorize(:red)
+    line_break
+    the_end
     line_break
     end_story
 end

@@ -20,8 +20,7 @@
     choose = prompt.select(" ") do |menu|
     menu.enum '.'
     menu.choice"Three Pigs"
-    menu.choice"Wild of wild"
-    menu.choice"hahaha"
+    menu.choice"Breath of the wild"
     menu.choice"Exit"
     end
     case choose

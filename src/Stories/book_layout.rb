@@ -19,6 +19,12 @@
         end
     end
 
+    def the_end
+        title = Artii::Base.new 
+        puts title.asciify("THE   END").colorize(:red)
+    end
+
+        #Ex:- :default =>''
     def line_break
         puts "\n"
         puts "*" * 70
