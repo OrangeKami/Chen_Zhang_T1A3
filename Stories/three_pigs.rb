@@ -1,8 +1,6 @@
-require './stories.rb'
+require_relative '../book_layout.rb'
 
-class Three < Storyclass
-     def title()
-     puts "Title: 3 Pigs"
-     puts "Author: Unknown"   
-    end
+def intro 
+    puts "Once upon a time there were three little pigs."
 end
+
