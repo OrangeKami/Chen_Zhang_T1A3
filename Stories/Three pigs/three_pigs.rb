@@ -3,7 +3,6 @@ require 'Artii'
 require 'colorize'
 
 def intro 
-    line_break
     "Once upon a time there were three little pigs.".each_char {|c|print c; sleep 0.03}
     line_break_space
     "And there was a wolf who liked to catch little pigs and eat them up.".each_char {|c|print c; sleep 0.03}
@@ -50,11 +49,11 @@ def choose
         return choose
     when "Oldest Pig"
         line_break
-        chat "The oldest amongst them decided to build a house of bricks.".colorize(:brown)
+        chat "The oldest amongst them decided to build a house of bricks.".colorize(:magenta)
         line_break_space
-        chat "The big bad wolf tried to huff and puff and blow the third house down, but he could not. He kept trying for hoursbut house was very strong and all the three pigs were safe inside.".colorize(:brown)
+        chat "The big bad wolf tried to huff and puff and blow the third house down, but he could not. He kept trying for hoursbut house was very strong and all the three pigs were safe inside.".colorize(:magenta)
         line_break_space
-        chat "He tried to enter through the chimney but the third pig boild a big pot of water and kept it below the chimney.".colorize(:brown)
+        chat "He tried to enter through the chimney but the third pig boild a big pot of water and kept it below the chimney.".colorize(:magenta)
         line_break
     end
 end
