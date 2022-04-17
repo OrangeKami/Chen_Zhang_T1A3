@@ -10,7 +10,7 @@ puts "\e[H\e[2J"
 puts "Welcome to Stroybooks Advanture"#.colorize(:light_blue)
 
 prompt = TTY::Prompt.new
-
+#prompt.select not functionable
 story_dir = prompt.select("Select a stroy book to expole: ".each_char {|c| putc c; sleep 0.05}) do |menu|
     # menu.enum "."
     Dir.glob("Stories/*/story.rb").each do |story_rb|
