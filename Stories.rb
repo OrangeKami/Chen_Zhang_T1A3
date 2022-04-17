@@ -7,7 +7,7 @@
 
   #clear the terminal
   # puts "\e[H\e[2J"
-  # Use layout.rb to save the lines
+  # Use layout.rb to save lines
   clear
   #welcome title
   a = Artii::Base.new :font => 'slant'

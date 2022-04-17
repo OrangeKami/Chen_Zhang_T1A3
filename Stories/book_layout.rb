@@ -20,14 +20,26 @@
     end
 
     def line_break
+        puts "\n"
         puts "*" * 70
+    end
+    
+    def line_break_space 
+        puts "\n"
+        puts "\n"
     end
 
     def chat(content)
-        puts content
+        content.each_char {|c|print c; sleep 0.03}.colorize(:green)
         sleep 1
     end
-   
+    # choices
+    def options(question)
+        puts question
+        gets.chomp.downcase
+    end
+    
+
     def clear
         system ("cls")
     end
