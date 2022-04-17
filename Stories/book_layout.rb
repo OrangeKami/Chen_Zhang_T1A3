@@ -1,4 +1,3 @@
-class Book_layout
     def end_story
         sleep 1
         puts "Whould you like to choose another Story?"
@@ -29,4 +28,6 @@ class Book_layout
         sleep 1
     end
    
-end
+    def clear
+        system ("cls")
+    end

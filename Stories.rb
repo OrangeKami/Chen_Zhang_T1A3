@@ -1,12 +1,15 @@
   require "bundler"
   Bundler.require(:default)
   require 'Artii'
-  require_relative "./Stories/three_pigs.rb"
-  
+  #wrong relative will display three pigs before welcome title
+  # require_relative "./Stories/Three pigs/three_pigs.rb"
+  require_relative "./Stories/book_layout.rb"
+
   #clear the terminal
   # puts "\e[H\e[2J"
-  system ("cls")
-  #intro
+  # Use layout.rb to save the lines
+  clear
+  #welcome title
   a = Artii::Base.new :font => 'slant'
   puts a.asciify("Welcome  To ").colorize(:green)
   puts a.asciify("StoryBooks Advanture").colorize(:green)
@@ -23,8 +26,8 @@
     end
     case choose
       when "Three Pigs"
-          load "./Stories/three_pigs.rb"
+          load "./Stories/Three pigs/three_pigs.rb"
       when "Exit"
         # puts "\e[H\e[2J"
-        system ("cls")
+        clear
       end
