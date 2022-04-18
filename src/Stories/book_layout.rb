@@ -27,7 +27,7 @@
         #Ex:- :default =>''
     def line_break
         puts "\n"
-        puts "*" * 70
+        puts "-" * 70
     end
     
     def line_break_space 

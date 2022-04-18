@@ -66,7 +66,6 @@ def end_three_pigs
     chat "The two young pigs felt sorry for being lazy while building the houses".colorize(:cyan)
     line_break_space
     chat "They also built their houses with bricks and all three little pigs lived happily ever after.".colorize(:cyan)
-    line_break_space
     line_break
     the_end
     line_break
