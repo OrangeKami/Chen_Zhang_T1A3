@@ -1,6 +1,6 @@
-require_relative "character"
+# require_relative "./Character.rb"
 require_relative "../../book_layout.rb"
-require "./Starting.rb"
+require_relative "./Starting.rb"
 require 'Artii' 
 require 'colorize'
 

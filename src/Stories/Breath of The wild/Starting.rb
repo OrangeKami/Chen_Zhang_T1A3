@@ -1,9 +1,9 @@
 require_relative "../../book_layout.rb"
-require './Character.rb'
+require_relative './Character.rb'
 require 'colorize'
 require "bundler"
 Bundler.require(:default)
-require "./Forest.rb"
+require_relative "./Forest.rb"
 
 
 
@@ -12,9 +12,9 @@ class Starting
         clear
         chat "what is you name?"
         line_break_space
-        prompt; @name = gets.chomp.upcase 
+        prompt; player_name = gets.chomp.upcase 
         #new character and set exp to 0
-        # player = Character.new(name, 0)
+        # player1 = Character.new(player_name, 0)
         clear
         t = Artii::Base.new
         puts t.asciify("Wake up !").green
@@ -24,7 +24,7 @@ class Starting
         puts t.asciify("Wake up !").green
         sleep 2
         line_break
-        chat "Hi, #{@name}, I am princess Peach, I am trapping at Castle by the Big Boss."
+        chat "Hi, #{player_name}, I am princess Peach, I am trapping at Castle by the Big Boss."
         line_break_space
         chat "Come, warrior. Come to save me and the world~"
         sleep 1
@@ -49,7 +49,7 @@ class Starting
             when "Climb down to the forest"
                 chat "you fell down at half way"
                 #gain exp still working on it
-                # player_exp = player.exp_gain(50)
+                # player_exp = player1.exp_gain(50)
                 line_break_space
                 the_end
                 sleep 2

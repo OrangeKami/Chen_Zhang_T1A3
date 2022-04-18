@@ -25,7 +25,7 @@
       when "Three Pigs"
           load "./Stories/Three pigs/three_pigs.rb"
       when "Breath of the wild"
-          load "./Stories/Breath of The wild/Breath of the wild.rb"
+          load "./Stories/Breath of The wild/Breath_of_the_wild.rb"
       when "Exit"
         # puts "\e[H\e[2J"
         clear
