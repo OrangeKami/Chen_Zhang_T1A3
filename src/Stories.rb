@@ -10,11 +10,11 @@
   #welcome title
   a = Artii::Base.new :font => 'slant'
   puts a.asciify("Welcome  To ").green
-  puts a.asciify("StoryBooks Advanture").green
+  puts a.asciify("StoryBooks Adventure").green
  #choose the books from Stories folder
     prompt = TTY::Prompt.new
     line_break_space
-    "Select a story to advanture:\n ".each_char {|c|print c; sleep 0.05}
+    "Select a story to adventure:\n ".each_char {|c|print c; sleep 0.05}
     sleep 0.5
     choose = prompt.select(" ") do |menu|
     menu.enum '.'
