@@ -21,7 +21,7 @@
 
     def the_end
         title = Artii::Base.new 
-        puts title.asciify("THE   END").colorize(:red)
+        puts title.asciify("THE   END").red
     end
 
         #Ex:- :default =>''
@@ -36,7 +36,7 @@
     end
 
     def chat(content)
-        content.each_char {|c|print c; sleep 0.03}.colorize(:green)
+        content.each_char {|c|print c; sleep 0.03}
         sleep 1
     end
     # choices
@@ -48,4 +48,8 @@
 
     def clear
         system ("cls")
+    end
+        
+    def prompt ()
+        print ">".light_:red
     end

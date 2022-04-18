@@ -11,8 +11,8 @@
   clear
   #welcome title
   a = Artii::Base.new :font => 'slant'
-  puts a.asciify("Welcome  To ").colorize(:green)
-  puts a.asciify("StoryBooks Advanture").colorize(:green)
+  puts a.asciify("Welcome  To ").green
+  puts a.asciify("StoryBooks Advanture").green
  #choose the books from Stories folder
     prompt = TTY::Prompt.new
     "Select a story to advanture:\n ".each_char {|c|print c; sleep 0.05}

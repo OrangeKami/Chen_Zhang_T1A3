@@ -1,8 +1,8 @@
 class Character
     attr_accessor :name, :exp
-    def initialize (name, exp)
+    def initialize (name)
         @name = name
-        @exp = exp
+        @exp = 0
     end
 
     def exp_gain(amount)
