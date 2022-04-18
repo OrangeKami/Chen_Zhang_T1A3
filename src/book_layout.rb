@@ -1,9 +1,11 @@
     #choose exit or back to the main menu
     def end_story
         sleep 1
-        puts "Whould you like to choose another Story?"
-        puts ""
-        puts "Y/N"
+        line_break
+        chat "Whould you like to choose another Story?"
+        line_break_space
+        chat "Y/N"
+        line_break_space
         another_story = gets.chomp.downcase
         if another_story.include? "y"
             load './Stories.rb'
@@ -39,7 +41,7 @@
 
     #make line like type in
     def chat(content)
-        content.each_char {|c|print c; sleep 0.03}
+        content.each_char {|c|print c; sleep 0.02}
         sleep 1
     end
     

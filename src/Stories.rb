@@ -13,6 +13,7 @@
   puts a.asciify("StoryBooks Advanture").green
  #choose the books from Stories folder
     prompt = TTY::Prompt.new
+    line_break_space
     "Select a story to advanture:\n ".each_char {|c|print c; sleep 0.05}
     sleep 0.5
     choose = prompt.select(" ") do |menu|
