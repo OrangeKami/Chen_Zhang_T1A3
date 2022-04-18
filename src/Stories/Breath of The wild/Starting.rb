@@ -9,7 +9,9 @@ class Starting
         clear
         chat "what is you name?"
         line_break_space
-        prompt; @name = gets.chomp
+        prompt; @name = gets.chomp.upcase 
+        #new character and set exp to 0
+        # player = Character.new(name, 0)
         clear
         t = Artii::Base.new
         puts t.asciify("Wake up!").green
@@ -42,30 +44,37 @@ class Starting
             case path 
             when "Climb down to the forest"
                 chat "you fell down at half way"
-                # @exp = Character.exp_gain(50)
+                #gain exp still working on it
+                # player_exp = player.exp_gain(50)
                 line_break_space
                 the_end
                 sleep 2
-                return start_story
+                clear
+                return welcome
             when  "go to the path"
-                chat "You walk on the path and you see a wooden house."
+                chat "You walk on the path and see a wooden house."
                 line_break_space
                 chat "Please choose wooden house or path?"
                 line_break
-                choose1 = gets.chomp.downcase
+                prompt; choose1 = gets.chomp.downcase
                 if choose1.include? "w"
+                    line_break_space
                     chat "You are close to the wooden house and an older man shows up"
                     line_break_space
-                    chat "He tells you there is a secret path will lead you to the castle in the forest and is an " + "empty ".cyan + "place."
+                    chat "He tells you there is a secret path that will lead you to the castle in the forest and is an " + "empty ".cyan + "place."
                     line_break_space
                     chat "You leave the house and follow the path"
-                    # @exp = Character.exp_gain(500)
-                elsif choose1.include?
+                    #exp problem
+                #    player_exp = exp_gain(500)
+                elsif choose1.include? "p"
+                    line_break_space
                     chat "You are walking on the path with nice scene."
                 else
                     chat "You have to choose your way"
-                   
+                   return choose1
                 end
             end
+            forest = Forest.new()
+            forest.start
       end       
 end
