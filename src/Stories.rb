@@ -2,9 +2,7 @@
   Bundler.require(:default)
   require 'Artii'
   #wrong relative will display three pigs before welcome title
-  # require_relative "./Stories/Three pigs/three_pigs.rb"
-  require_relative "./Stories/book_layout.rb"
-
+  require_relative "./book_layout.rb"
   #clear the terminal
   # puts "\e[H\e[2J"
   # Use layout.rb to save lines
@@ -26,6 +24,8 @@
     case choose
       when "Three Pigs"
           load "./Stories/Three pigs/three_pigs.rb"
+      when "Breath of the wild"
+          load "./Stories/Breath of The wild/ui.rb"
       when "Exit"
         # puts "\e[H\e[2J"
         clear

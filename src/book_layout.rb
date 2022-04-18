@@ -1,3 +1,5 @@
+
+
     def end_story
         sleep 1
         puts "Whould you like to choose another Story?"
@@ -5,7 +7,7 @@
         puts "Y/N"
         another_story = gets.chomp.downcase
         if another_story.include? "y"
-            load "./Stories.rb"
+            load './Stories.rb'
         elsif another_story.include? "n"
             puts "Thank You"
             sleep 1
@@ -51,5 +53,12 @@
     end
         
     def prompt ()
-        print ">".light_:red
+        print ">".light_red
+    end
+
+    def helps  
+        chat "type " + "q ".red + "or " + "quit: ".red + "back to the main menu or quit"
+        line_break_space
+        chat "type " + "start ".blue + "to start you story"
+        line_break_space
     end

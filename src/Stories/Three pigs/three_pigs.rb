@@ -1,4 +1,4 @@
-require_relative '../book_layout.rb'
+require_relative '../../book_layout.rb'
 require 'Artii'
 require 'colorize'
 
@@ -10,8 +10,8 @@ end
 
 clear
 sleep 0.5
-title = Artii::Base.new :font => 'slant'
-puts title.asciify("Three Pigs").red
+title1 = Artii::Base.new :font => 'slant'
+puts title1.asciify("Three Pigs").red
 
 sleep 1
 line_break
