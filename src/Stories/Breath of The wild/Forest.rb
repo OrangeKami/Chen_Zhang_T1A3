@@ -11,7 +11,7 @@ class Forest
     def initialize()
         clear
         title3 = Artii::Base.new :font => 'slant'
-        puts title3.asciify("Froest").green
+        puts title3.asciify("Forest").green
         line_break
         chat "You are step into the forest"
     end
@@ -27,7 +27,7 @@ class Forest
         if choose2.include? "c"
             line_break_space
             chat "you are heading to the castle"
-            castle = Castel.new()
+            castle = Castle.new()
             castle.castle_start
         else
             line_break_space

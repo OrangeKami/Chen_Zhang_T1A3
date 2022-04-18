@@ -42,7 +42,7 @@ class Starting
          path = prompt.select(" ") do |menu|
             menu.enum '.'
             menu.choice"Climb down to the forest"
-            menu.choice"go to the path"
+            menu.choice"Go to the path"
             end
             line_break
             case path 

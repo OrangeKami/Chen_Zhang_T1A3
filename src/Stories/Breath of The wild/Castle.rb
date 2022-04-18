@@ -3,7 +3,7 @@ require_relative './Character.rb'
 require 'colorize'
 require 'Artii'
 
-class Castel
+class Castle
     def initialize()
         clear
         title4 = Artii::Base.new :font => 'slant'

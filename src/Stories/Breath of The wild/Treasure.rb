@@ -8,7 +8,7 @@ class Treasure
     def initialize()
         clear
         title5 = Artii::Base.new :font => 'slant'
-        puts title5.asciify("Chest").red
+        puts title5.asciify("Treasure").red
         line_break
         chat "You are in the Cave, a chest shows up~~"
     end
@@ -17,7 +17,7 @@ class Treasure
         line_break
         #should have 3 choioces here one teleport one item one the end
         chat "you open the chest, a mist come around you. you are teleported "
-        castle = Castel.new()
+        castle = Castle.new()
         castle.castle_start
     end
 end
