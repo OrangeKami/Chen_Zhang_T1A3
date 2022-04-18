@@ -1,5 +1,6 @@
 require_relative "character"
 require_relative "../../book_layout.rb"
+require "./Starting.rb"
 require 'Artii' 
 require 'colorize'
 
@@ -17,7 +18,8 @@ def welcome
     while true 
         prompt; type = gets.chomp.downcase
         if type.include?("s") == true
-            input_names 
+            this_story = Starting.new()
+            this_story.start_story
         elsif type.include?("h") ==true
             helps
         elsif type.include?("q") == true
@@ -28,12 +30,9 @@ def welcome
     end
 end
 
-def input_names
-    chat "Set your worrior name: "
-end     
-
 welcome
 
 
 
+   
 # player = Character.new(avatar)

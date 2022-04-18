@@ -1,5 +1,4 @@
-
-
+    #choose exit or back to the main menu
     def end_story
         sleep 1
         puts "Whould you like to choose another Story?"
@@ -21,12 +20,13 @@
         end
     end
 
+    #artii style end at the end of the story
     def the_end
         title = Artii::Base.new 
         puts title.asciify("THE   END").red
     end
 
-        #Ex:- :default =>''
+    #line break
     def line_break
         puts "\n"
         puts "-" * 70
@@ -37,28 +37,28 @@
         puts "\n"
     end
 
+    #make line like type in
     def chat(content)
         content.each_char {|c|print c; sleep 0.03}
         sleep 1
     end
-    # choices
-    def options(question)
-        puts question
-        gets.chomp.downcase
-    end
     
-
+    #clear termianl screen
     def clear
         system ("cls")
     end
-        
+    
+    #setr prompt symbol and color
     def prompt ()
         print ">".light_red
     end
-
+    
+    # indicate helps
     def helps  
         chat "type " + "q ".red + "or " + "quit: ".red + "back to the main menu or quit"
         line_break_space
         chat "type " + "start ".blue + "to start you story"
         line_break_space
     end
+
+    
