@@ -4,7 +4,7 @@ require 'colorize'
 require 'Artii'
 
 class Castle
-    def initialize()
+    def initialize
         clear
         title4 = Artii::Base.new :font => 'slant'
         puts title4.asciify("Castle").red

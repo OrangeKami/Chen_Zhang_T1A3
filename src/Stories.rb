@@ -1,7 +1,7 @@
   require "bundler"
   Bundler.require(:default)
   require 'Artii'
-  #wrong relative will display three pigs before welcome title
+  require_relative "./Stories/Three pigs/Three_Pigs.rb"
   require_relative "./book_layout.rb"
   #clear the terminal
   # puts "\e[H\e[2J"
@@ -14,19 +14,21 @@
  #choose the books from Stories folder
     prompt = TTY::Prompt.new
     line_break_space
-    "Select a story to adventure:\n ".each_char {|c|print c; sleep 0.05}
     sleep 0.5
-    choose = prompt.select(" ") do |menu|
-    menu.enum '.'
-    menu.choice"Three Pigs"
-    menu.choice"Breath of the wild"
-    menu.choice"Exit"
+    choose = prompt.select("Select a story to adventure:\n  ") do |menu|
+      menu.enum '.'
+      Dir.glob("./Stories/*/*.rb").each do |book_rb|  
+        choose = File.basename(book_rb, ".rb")
+      menu.choice choose   
+      end
+      menu.choice "Exit"
     end
+
     case choose
-      when "Three Pigs"
-          load "./Stories/Three pigs/three_pigs.rb"
-      when "Breath of the wild"
-          load "./Stories/Breath of The wild/Breath_of_the_wild.rb"
+      when "Three_Pigs"
+        ThreePigs.new
+      when "Breath_of_the_wild"
+        
       when "Exit"
         # puts "\e[H\e[2J"
         clear
