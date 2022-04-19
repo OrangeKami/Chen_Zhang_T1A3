@@ -1,5 +1,6 @@
 require_relative "../../book_layout.rb"
 require_relative './Character.rb'
+# require_relative "../../Stories.rb"
 require 'colorize'
 require "bundler"
 Bundler.require(:default)

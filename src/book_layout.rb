@@ -1,4 +1,5 @@
-    #choose exit or back to the main menu
+#    require_relative "./Stories.rb"
+   #choose exit or back to the main menu
     def end_story
         sleep 1
         line_break
