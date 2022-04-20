@@ -1,11 +1,11 @@
 require_relative '../book_layout.rb'
+require_relative '../../profile.rb'
 require 'Artii'
 require 'colorize'
 
-class ThreePigs 
-    def initialize
-        title
-    end
+class ThreePigs
+   
+    
     def title 
         clear
         sleep 0.5
@@ -69,6 +69,7 @@ class ThreePigs
 
 
     def end_three_pigs
+        ending1 = 0
         line_break
         chat "The wolf fell into it and died.".cyan
         line_break_space
@@ -78,7 +79,8 @@ class ThreePigs
         line_break
         the_end
         line_break
-        end_story
+        ending1 += 1
+        return ending1
     end
 end
 

@@ -1,34 +1,39 @@
-#    require_relative "./Stories.rb"
+#    require "../main.rb"
    #choose exit or back to the main menu
-    def end_story
+   def end_story
+    sleep 1
+    line_break
+    chat "Whould you like to choose another Story?"
+    line_break_space
+    chat "Y/N"
+    line_break_space
+    another_story = gets.chomp.downcase
+    if another_story.include? "y"
+        load ".././main.rb"
+    elsif another_story.include? "n"
+        puts "Thank You"
         sleep 1
-        line_break
-        chat "Whould you like to choose another Story?"
-        line_break_space
-        chat "Y/N"
-        line_break_space
-        another_story = gets.chomp.downcase
-        if another_story.include? "y"
-            load './Stories.rb'
-        elsif another_story.include? "n"
-            puts "Thank You"
-            sleep 1
-            system ("cls")
-            write_file
-            exit
-        else  
-            puts "Bye Bye"
-            sleep 1
-            system ("cls")
-            write_file
-            exit 
-        end
+        system ("cls")
+        exit
+    else  
+        puts "Bye Bye"
+        sleep 1
+        system ("cls")
+        exit 
     end
+end
+
 
     #artii style end at the end of the story
     def the_end
         title = Artii::Base.new 
         puts title.asciify("THE   END").red
+    end
+
+    def quit_app 
+        line_break_space
+        title = Artii::Base.new 
+        puts title.asciify("Thank You").blue
     end
 
     #line break
