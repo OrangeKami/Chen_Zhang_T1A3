@@ -14,11 +14,13 @@
             puts "Thank You"
             sleep 1
             system ("cls")
+            write_file
             exit
         else  
             puts "Bye Bye"
             sleep 1
             system ("cls")
+            write_file
             exit 
         end
     end
@@ -64,4 +66,19 @@
         line_break_space
     end
 
+    def write_file
+        File.write("user.sav", Marshal.dump(user))
+    end
+
+    def read_file
+        begin
+            return [] unless File.exist?("user.sav")
+            user = Marshal.load(File.read("user.sav"))
+            rescue ArgumentError, TypeError
+                puts "user data has been corrupted".red 
+                @prompt.yes?("\nReinitialise data file? (no undo)".blue) ? File.write("user.sav", Marshal.dump([])) : exit
+                retry
+            end
+        end
     
+       

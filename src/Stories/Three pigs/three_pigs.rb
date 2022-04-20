@@ -1,4 +1,4 @@
-require_relative '../../book_layout.rb'
+require_relative '../book_layout.rb'
 require 'Artii'
 require 'colorize'
 
