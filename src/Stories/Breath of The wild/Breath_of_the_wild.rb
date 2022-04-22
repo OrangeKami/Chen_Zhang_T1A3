@@ -5,7 +5,7 @@ require 'Artii'
 require 'colorize'
 
 class Breath
-    def initializ
+    def initialize
        welcome
     end
 
