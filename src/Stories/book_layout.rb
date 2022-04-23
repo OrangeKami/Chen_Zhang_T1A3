@@ -1,24 +1,26 @@
 #    require "../main.rb"
    #choose exit or back to the main menu
    def end_story
-    sleep 1
-    line_break
-    chat "Whould you like to choose another Story?"
-    line_break_space
-    chat "Y/N"
-    line_break_space
-    another_story = gets.chomp.downcase
-    if another_story.include? "y"
-        Adventure.new
-    elsif another_story.include? "n"
-        quit_app
-    else  
-        quit_app
+        sleep 1
+        line_break
+        chat "Whould you like to back to Adventure Books"
+        line_break_space
+        chat "Y/N"
+        line_break_space
+        prompt; another_story = gets.chomp.downcase
+        if another_story.include? "y"
+            Adventure.new
+        else  
+            quit_app
+        end
     end
-end
 
+   
+    def you_died
+        title = Artii::Base.new 
+        puts title.asciify("YOU   DIED").red
+    end
 
-    #artii style end at the end of the story
     def the_end
         title = Artii::Base.new 
         puts title.asciify("THE   END").red
@@ -75,4 +77,25 @@ end
     end
 
     
-       
+    DEATH = [
+        "You died.".red,
+        "Nice job! You died again!".red,
+        "OMG, seriously?".red,
+        "My 3 Yeat old child is better than you.".red,
+        "Try again!".red,
+        "Gan Ba De".red
+      ]
+      
+      def death
+        chat DEATH[rand(DEATH.length)]
+        line_break_space
+        3.downto(1) do |n|
+          puts '.'
+          sleep n
+        end
+        chat "A lighting just go through your body.".red
+        line_break_space
+        chat "And you are transported to where the adventure strats!!".green
+            sleep 3
+        Breath.new 
+    end

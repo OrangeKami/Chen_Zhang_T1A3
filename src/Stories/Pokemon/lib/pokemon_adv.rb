@@ -45,7 +45,7 @@ end
                     line_break_space
                     chat "#{start.poke_name[0]} ".cyan + "is captured."
                     line_break_space
-                    chat "Now, it is transfer to you pokedex."
+                    chat "Now, it is transfered to you pokedex."
                     sleep 1
                     i -= 1
                     CSV.open("data.csv", "ab") do |csv|
@@ -64,7 +64,7 @@ end
                 line_break
                 chat "You just passed " + "#{start.location[0]}.".blue
                 line_break_space
-                chat "Now, you are at" + "#{start.location[1]}.".blue
+                chat "Now, you are at " + "#{start.location[1]}.".blue
                 line_break_space
                 chat "Sunddenly, a wild #{start.gender[1]} " + "#{start.poke_name[1]} ".cyan + "shows up!"
                 line_break_space
@@ -76,7 +76,7 @@ end
                     if type.include?("y") == true
                         chat "#{start.poke_name[1]} ".cyan + "is captured"
                         line_break_space
-                        chat "Now, it is transfer to you pokedex."
+                        chat "Now, it is transfered to you pokedex."
                         sleep 1
                         i -= 1
                         CSV.open("data.csv", "ab") do |csv|
@@ -111,7 +111,7 @@ end
                         line_break_space
                         chat "#{start.poke_name[2]} ".cyan + "is captured."
                         line_break
-                        chat "Now, it is transfer to you pokedex."
+                        chat "Now, it is transfered to you pokedex."
                         sleep 3
                         i -= 1
                         CSV.open("data.csv", "ab") do |csv|
@@ -122,7 +122,7 @@ end
                         line_break_space
                         chat "You missed your last chance!"
                         line_break_space
-                        chat "Now, you will return home."
+                        chat "Now, you are back home."
                         sleep 3
                     end
                 

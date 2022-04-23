@@ -1,6 +1,7 @@
 # require_relative "./Character.rb"
 require_relative "../book_layout.rb"
 require_relative "./lib/Starting.rb"
+require_relative "./lib/Ending.rb"
 require 'Artii' 
 require 'colorize'
 
@@ -8,7 +9,8 @@ class Breath
     def initialize
        welcome
     end
-end    
+        
+end
 
     def welcome 
         clear
@@ -23,7 +25,7 @@ end
         while true 
             prompt; type = gets.chomp.downcase
             if type.include?("s") == true
-                this_story = Starting.new()
+                this_story = Starting.new
                 this_story.start_story
             elsif type.include?("h") ==true
                 helps
@@ -35,4 +37,4 @@ end
         end
     end
 
-
+   
