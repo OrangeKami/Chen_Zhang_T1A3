@@ -27,7 +27,7 @@ end
             if type.include?("s") == true
                 this_story = Starting.new
                 this_story.start_story
-            elsif type.include?("h") ==true
+            elsif type.include?("h") == true
                 helps
             elsif type.include?("q") == true
                 end_story

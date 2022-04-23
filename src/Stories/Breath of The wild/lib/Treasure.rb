@@ -1,6 +1,9 @@
 require_relative "../../book_layout.rb"
 require_relative "./Ending.rb"
 require_relative './Castle.rb'
+require "bundler"
+Bundler.require(:default)
+
 
 class Treasure
     def initialize
@@ -20,25 +23,31 @@ class Treasure
     end
 
     def treasure_start
-        line_break
-        chat "There are two " + "Tresure Chests ".red + "infront of you."
-        line_break_space
-        prompt.ask("Which chest do you want to open? 1 or 2", require: true)
-        answer = gets.chomp
-        if answer = 1
             line_break
-            chat "You open the first chest, and a secrect mist shows up~~".red
+        chat "There are two " + "Tresure Chests ".red + "in front of you."
             line_break_space
+        chat "Which chest do you want to open? 1 or 2"
+            line_break
+          
+        while true       
+            prompt; answer = gets.chomp.to_s
+            line_break
+            
+            if answer.include?("1") == true
+                line_break
+            chat "You open the first chest, and a secrect mist shows up~~".red
+                line_break_space
             chat "You are teleported again.? again......"
             sleep 3
             Castle.new
             
-        elsif answer = 2
-            ending1
-        else
-            ending2
-        end
-
+            elsif answer.include?("2") == true
+                ending1
+            
+            else
+                ending2
+            end
+       end
         
         
     end

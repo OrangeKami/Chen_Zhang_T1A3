@@ -76,12 +76,12 @@
 
     # this is the random death speech wehn you died in game
     DEATH = [
-        "You died.".red,
-        "Nice job! You died again!".red,
-        "OMG, seriously?".red,
-        "My 3 Yeat old child is better than you.".red,
-        "Try again!".red,
-        "Gan Ba De".red
+        "You died.",
+        "Nice job! You died again!",
+        "OMG, seriously?",
+        "My 3 Yeat old child is better than you.",
+        "Try again!",
+        "Gan Ba De"
       ]
       
       #return back to the game start
@@ -92,9 +92,9 @@
           puts '.'
           sleep n
         end
-        chat "A lighting just go through your body.".red
+        chat "A lightening just striked your body.".red
         line_break_space
-        chat "And you are transported to where the adventure strats!!".green
+        chat "And you are transported to where the adventure starts!!".green
             sleep 3
         Breath.new 
     end
