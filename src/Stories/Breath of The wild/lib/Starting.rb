@@ -18,7 +18,7 @@ class Starting
         puts t.asciify("Wake up !").green
         sleep 2
         line_break
-        chat "Hi, I am princess Peach, I am trapping at Castle by the Big Boss.".magenta
+        chat "Hi, I am princess Peach, I am trapped at Castle by the Big Boss.".magenta
         line_break_space
         chat "Come, warrior. Come to save me and the world~".magenta
         sleep 1
@@ -73,6 +73,7 @@ class Starting
                         line_break_space
                         chat "You passed the wooden house all the way to the forest".green
                         end
+                        sleep 2
                         Forest.new
                     end
                 end       

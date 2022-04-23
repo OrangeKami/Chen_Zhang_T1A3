@@ -1,5 +1,7 @@
 require_relative "../../book_layout.rb"
 require_relative "./Ending.rb"
+require "bundler"
+Bundler.require(:default)
 
 class Castle
     def initialize
