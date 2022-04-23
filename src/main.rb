@@ -10,7 +10,7 @@ class Adventure
     end
 end
 
-    def intro
+    def intro #app title and menu that you can choose to chanllege
         clear
         a = Artii::Base.new :font => 'slant'
         showup a.asciify("Welcome  To ").green

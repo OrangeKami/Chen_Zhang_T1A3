@@ -11,7 +11,7 @@ class Breath
     end
         
 end
-
+    #welcome ask to play or leave
     def welcome 
         clear
         sleep 0.5

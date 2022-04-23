@@ -1,6 +1,4 @@
-#    require "../main.rb"
-   #choose exit or back to the main menu
-   def end_story
+   def end_story #choose exit or back to the main menu
         sleep 1
         line_break
         chat "Whould you like to back to Adventure Books"
@@ -16,17 +14,17 @@
     end
 
    
-    def you_died
+    def you_died # Died sign
         title = Artii::Base.new 
         puts title.asciify("YOU   DIED").red
     end
 
-    def the_end
+    def the_end #the end sign
         title = Artii::Base.new 
         puts title.asciify("THE   END").red
     end
 
-    def quit_app 
+    def quit_app #say thank you and exit
         line_break
         line_break_space
         title = Artii::Base.new 
@@ -36,47 +34,47 @@
         exit
     end
 
-    #line break
-    def line_break
+    
+    def line_break #line break with ----
         puts "\n"
         puts "-".green * 70
     end
     
-    def line_break_space 
+    def line_break_space #line break with space
         puts "\n"
         puts "\n"
     end
 
-    #make line like type in
-    def chat(content)
+   
+    def chat(content) #make line like type in
         content.each_char {|c|print c; sleep 0.02}
         sleep 0.5
     end
 
-    #game title show up
-    def showup(biaoti)
+   
+    def showup(biaoti)  #game title show up
         biaoti.each_char {|l| print l; sleep 0.0009}
         sleep 0.1
     end
-    #clear termianl screen
-    def clear
+    
+    def clear #clear termianl screen
         system ("cls")
     end
     
-    #setr prompt symbol and color
-    def prompt ()
+    
+    def prompt () #setr prompt symbol and color
         print ">".blue
     end
     
-    # indicate helps
-    def helps  
+   
+    def helps   # indicate helps
         chat "type " + "q ".red + "or " + "quit: ".red + "back to the main menu or quit"
         
         chat "type " + "start ".blue + "to start you story"
         
     end
 
-    
+    # this is the random death speech wehn you died in game
     DEATH = [
         "You died.".red,
         "Nice job! You died again!".red,
@@ -86,6 +84,7 @@
         "Gan Ba De".red
       ]
       
+      #return back to the game start
       def death
         chat DEATH[rand(DEATH.length)]
         line_break_space

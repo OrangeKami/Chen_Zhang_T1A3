@@ -10,7 +10,9 @@ class Pokemon_adv
     end    
 end    
     
+    #random choose the pokemon from database and write into CSV file
     def poke_adaventure(pokemon_array) 
+        #pokemon database
         poke_name = ["Pikachu", "Charmander", "Squirtle", "Bulbsaur", "Diglett", "Abra", "Ponyta", "Magikarp", "Eevee", "Mewtwo"]
         gender = ["Female", "Male", 'Uni-sex']
         location = ["Route1", "Route2", "Route13", "Route15", "Route28", "Berry_Fprest", "Four_island", "Lost_cave", "Tanoby Ruins"]
