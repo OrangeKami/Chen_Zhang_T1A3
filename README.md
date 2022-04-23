@@ -11,6 +11,8 @@ T1A3 Terminal Application
 
 (https://github.com/OrangeKami/Chen_Zhang_T1A3.git)
 
+With more than 40 commits and 2 branches
+
 ### Instalation
 
 Install gem and bundle
@@ -125,3 +127,8 @@ The code for this application is written in the following code style using Ruboc
     -Ruby Style Guide
 
 
+### Problem need to fix 
+
+    keep saying "warning: already initialized constant Artii::FONTPATH"
+
+    try to figue out why..
