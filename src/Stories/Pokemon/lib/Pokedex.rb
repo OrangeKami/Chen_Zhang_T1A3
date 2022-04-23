@@ -1,5 +1,5 @@
 
-    
+    # use terminal table to show CSV file
     def poke_index
         
         csv_text = File.read('data.csv')

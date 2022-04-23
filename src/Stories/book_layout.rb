@@ -1,30 +1,30 @@
-#    require "../main.rb"
-   #choose exit or back to the main menu
-   def end_story
-    sleep 1
-    line_break
-    chat "Whould you like to choose another Story?"
-    line_break_space
-    chat "Y/N"
-    line_break_space
-    another_story = gets.chomp.downcase
-    if another_story.include? "y"
-        Adventure.new
-    elsif another_story.include? "n"
-        quit_app
-    else  
-        quit_app
+   def end_story #choose exit or back to the main menu
+        sleep 1
+        line_break
+        chat "Whould you like to back to Adventure Books"
+        line_break_space
+        chat "Y/N"
+        line_break_space
+        prompt; another_story = gets.chomp.downcase
+        if another_story.include? "y"
+            Adventure.new
+        else  
+            quit_app
+        end
     end
-end
 
+   
+    def you_died # Died sign
+        title = Artii::Base.new 
+        puts title.asciify("YOU   DIED").red
+    end
 
-    #artii style end at the end of the story
-    def the_end
+    def the_end #the end sign
         title = Artii::Base.new 
         puts title.asciify("THE   END").red
     end
 
-    def quit_app 
+    def quit_app #say thank you and exit
         line_break
         line_break_space
         title = Artii::Base.new 
@@ -34,45 +34,68 @@ end
         exit
     end
 
-    #line break
-    def line_break
+    
+    def line_break #line break with ----
         puts "\n"
         puts "-".green * 70
     end
     
-    def line_break_space 
+    def line_break_space #line break with space
         puts "\n"
         puts "\n"
     end
 
-    #make line like type in
-    def chat(content)
+   
+    def chat(content) #make line like type in
         content.each_char {|c|print c; sleep 0.02}
         sleep 0.5
     end
 
-    #game title show up
-    def showup(biaoti)
+   
+    def showup(biaoti)  #game title show up
         biaoti.each_char {|l| print l; sleep 0.0009}
         sleep 0.1
     end
-    #clear termianl screen
-    def clear
+    
+    def clear #clear termianl screen
         system ("cls")
     end
     
-    #setr prompt symbol and color
-    def prompt ()
+    
+    def prompt () #setr prompt symbol and color
         print ">".blue
     end
     
-    # indicate helps
-    def helps  
+   
+    def helps   # indicate helps
         chat "type " + "q ".red + "or " + "quit: ".red + "back to the main menu or quit"
         
         chat "type " + "start ".blue + "to start you story"
         
     end
 
+    # this is the random death speech wehn you died in game
+    DEATH = [
+        "You died.".red,
+        "Nice job! You died again!".red,
+        "OMG, seriously?".red,
+        "My 3 Yeat old child is better than you.".red,
+        "Try again!".red,
+        "Gan Ba De".red
+      ]
+      
+      #return back to the game start
+      def death
+        chat DEATH[rand(DEATH.length)]
+        line_break_space
+        3.downto(1) do |n|
+          puts '.'
+          sleep n
+        end
+        chat "A lighting just go through your body.".red
+        line_break_space
+        chat "And you are transported to where the adventure strats!!".green
+            sleep 3
+        Breath.new 
+    end
     
-       

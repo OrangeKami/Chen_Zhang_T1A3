@@ -10,12 +10,12 @@ class Adventure
     end
 end
 
-    def intro
+    def intro #app title and menu that you can choose to chanllege
         clear
         a = Artii::Base.new :font => 'slant'
-        showup a.asciify("Welcome  To ").green
+        showup a.asciify("Welcome  To ").cyan
         line_break_space
-        showup a.asciify("StoryBooks Adventure").green
+        showup a.asciify("StoryBooks Adventure").cyan
         #choose the books from Stories folder
         line_break_space
         sleep 0.5

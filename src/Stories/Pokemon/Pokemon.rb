@@ -7,13 +7,15 @@ require_relative '../../main.rb'
 require_relative '../book_layout.rb'
 require_relative '../../main.rb'
     
-   clear
-        line_break
-      a = Artii::Base.new :font => 'epic'
-      showup a.asciify("Pokemon").green
-       line_break
-       sleep 1         
-            
+    #Title
+    clear
+    line_break
+    a = Artii::Base.new :font => 'epic'
+    showup a.asciify("Pokemon").green
+    line_break
+    sleep 1         
+     
+    #Menu that you choose next move
     def pokemon_menu
     line_break
     chat "Welcom to Pokemon World!".cyan

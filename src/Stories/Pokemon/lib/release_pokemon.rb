@@ -1,5 +1,5 @@
 
-
+#choose the row of the CSV file and rewrite it into blank
 def release_pokemon(pokemon_array)
     system 'cls'
     pokemon = []
@@ -27,10 +27,8 @@ def release_pokemon(pokemon_array)
     
     chat "Which pokemon you would like to release?"
     line_break_space
-    prompt
-    line_break
-   
-    release = gets.chomp
+    prompt; release = gets.chomp
+    line_break_space
      if poke_names.include?(release)
         read_file = File.new('data.csv', "r+").read
         write_file = File.new('data.csv', "w+")
@@ -42,6 +40,7 @@ def release_pokemon(pokemon_array)
         chat "Your #{release} ".red + "has been released."
         write_file.close
         sleep 2
+    
     else
         line_break
         chat "Can not find you pokemon."
