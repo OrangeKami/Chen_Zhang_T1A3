@@ -9,17 +9,11 @@
     line_break_space
     another_story = gets.chomp.downcase
     if another_story.include? "y"
-        load ".././main.rb"
+        Adventure.new
     elsif another_story.include? "n"
-        puts "Thank You"
-        sleep 1
-        system ("cls")
-        exit
+        quit_app
     else  
-        puts "Bye Bye"
-        sleep 1
-        system ("cls")
-        exit 
+        quit_app
     end
 end
 
@@ -31,15 +25,19 @@ end
     end
 
     def quit_app 
+        line_break
         line_break_space
         title = Artii::Base.new 
-        puts title.asciify("Thank You").blue
+        showup title.asciify("Thank You").blue
+        line_break
+        sleep 3
+        exit
     end
 
     #line break
     def line_break
         puts "\n"
-        puts "-" * 70
+        puts "-".green * 70
     end
     
     def line_break_space 
@@ -50,9 +48,14 @@ end
     #make line like type in
     def chat(content)
         content.each_char {|c|print c; sleep 0.02}
-        sleep 1
+        sleep 0.5
     end
-    
+
+    #game title show up
+    def showup(biaoti)
+        biaoti.each_char {|l| print l; sleep 0.0009}
+        sleep 0.1
+    end
     #clear termianl screen
     def clear
         system ("cls")
@@ -60,30 +63,16 @@ end
     
     #setr prompt symbol and color
     def prompt ()
-        print ">".light_red
+        print ">".blue
     end
     
     # indicate helps
     def helps  
         chat "type " + "q ".red + "or " + "quit: ".red + "back to the main menu or quit"
-        line_break_space
+        
         chat "type " + "start ".blue + "to start you story"
-        line_break_space
+        
     end
 
-    def write_file
-        File.write("user.sav", Marshal.dump(user))
-    end
-
-    def read_file
-        begin
-            return [] unless File.exist?("user.sav")
-            user = Marshal.load(File.read("user.sav"))
-            rescue ArgumentError, TypeError
-                puts "user data has been corrupted".red 
-                @prompt.yes?("\nReinitialise data file? (no undo)".blue) ? File.write("user.sav", Marshal.dump([])) : exit
-                retry
-            end
-        end
     
        

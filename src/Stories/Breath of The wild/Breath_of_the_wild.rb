@@ -8,12 +8,13 @@ class Breath
     def initialize
        welcome
     end
+end    
 
     def welcome 
         clear
         sleep 0.5
         title2 = Artii::Base.new :font => 'slant'
-        puts title2.asciify("Breath of the Wild").blue
+        showup title2.asciify("Breath of the Wild").blue
         line_break
         chat "Type " + "Help ".red + "for instruction"
         line_break_space
@@ -33,9 +34,5 @@ class Breath
             end
         end
     end
-end    
 
 
-
-   
-# player = Character.new(avatar)
