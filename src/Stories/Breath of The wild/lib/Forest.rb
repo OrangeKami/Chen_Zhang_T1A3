@@ -6,7 +6,7 @@ require_relative './Castle.rb'
 require_relative './Treasure.rb'
 
 class Forest
-    def initialize()
+    def initialize
         clear
         title3 = Artii::Base.new 
         puts title3.asciify("Forest").green

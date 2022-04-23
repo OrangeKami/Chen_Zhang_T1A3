@@ -28,7 +28,7 @@ class Castle
         case guess
         when "139"
             line_break_space
-            chat "The door is openedn!!".blue
+            chat "The door is opened!!".blue
             sleep 2
             ending3
         else
